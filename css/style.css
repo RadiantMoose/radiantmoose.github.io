@@ -78,7 +78,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #f5ecd1;
+    background-color: rgb(255, 255, 255);
     font-family:'Teko', Georgia, 'Times New Roman', Times, serif;
     font-size: 600%;
     
@@ -107,12 +107,27 @@ section {
     padding: 5px 20px;
 }
 
+.body1{
+    /* width: 50%; */
+    min-height: fit-content;
+    display: flex;
+    text-align: left;
+    font-family:'Open Sans', Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
+}
+
+.paragraph1{
+    width: 100%;
+    padding: 10px;
+
+
+}
+
 #video-container{
     display: flex;
     align-items: center;
-    width: 50%;
-    min-height: 800px;
-    padding: 60px;
+    min-width: max-content;
+    min-height: max-content;
 
 
 }
@@ -123,16 +138,11 @@ h2 {
     font-size: 300%;
 }
 
-.body1{
-    width: 50%;
-    min-height: fit-content;
-    display: flex;
-    font-family:'Open Sans', Georgia, 'Times New Roman', Times, serif;
-}
 
 .image3{ /*Halldor Filters*/
-  max-height: fit-content;
-  min-width: 50%;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .image4{ /*Halldor Filters*/
@@ -147,4 +157,41 @@ footer {
     text-align: center;
     margin-top:auto;
     
+}
+
+/* Common styles for all devices */
+
+/* Styles for screens with a maximum width of 767 pixels (mobile phones) */
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 14px; /* Adjust font size for smaller screens */
+
+    }
+
+
+    /* remove headder Image */
+    .image1{ 
+        visibility:hidden;
+        overflow: hidden;
+    }
+    
+    section {
+    /* margin-right: 20px; */
+    /* padding: 20px; */
+    display: flex;
+     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    padding:5px ;
+    }
+
+    
+#video-container{
+    min-height: 400px;
+    min-width: 80%;
+    padding: 60px;
+
+
+    }
 }
